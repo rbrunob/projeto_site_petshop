@@ -6,6 +6,11 @@ const formSignUp = document.getElementById('formSignUp');
 signUpButton.addEventListener('click', setSignUpForm);
 signInButton.addEventListener('click', setSignInForm);
 
+/**
+ * [ A função altera os estilos do formulário cadastro, para que ele se torne vísivel para o usuário ]
+ * 
+ * @returns {void}
+ */
 function setSignUpForm() {
     signUpButton.classList.add('selected');
     signInButton.classList.remove('selected');
@@ -14,6 +19,11 @@ function setSignUpForm() {
     formSignUp.style.display = 'flex';
 }
 
+/**
+ * [ A função altera os estilos do formulário Login, para que ele se torne vísivel para o usuário ]
+ * 
+ * @returns {void}
+ */
 function setSignInForm() {
     signInButton.classList.add('selected');
     signUpButton.classList.remove('selected');
@@ -27,6 +37,12 @@ const submitRegister = formSignUp.querySelector('button');
 
 submitRegister.addEventListener('click', (event) => getDataUser(event));
 
+/**
+ * [ A função salva os dados enviados pelo usuário do formulário de cadastro no LocalStorage ]
+ * > Cria um objeto no LocalStorage simulando um banco de dados com os dados do usuário
+ * >> Redireciona o usuário para a tela de login
+ * @returns {void}
+ */
 function getDataUser(event) {
     event.preventDefault();
 
@@ -47,6 +63,12 @@ function getDataUser(event) {
 
 submitLogin.addEventListener('click', (event) => verifyDataUser(event));
 
+/**
+ * [ A função verifica se o usuário preecheu os campos do formulário de login corretamente, de acordo com os dados preenchidos no formulário de cadastro ]
+ * > Realiza a pesquisa e comparação pelos dados no objeto "new_user" do LocalStorage
+ * >> Caso o usuário cometa um erro, ele redireciona o usuário para a tela de cadastro novamente
+ * @returns {void}
+ */
 function verifyDataUser(event) {
     event.preventDefault()
 
@@ -81,6 +103,10 @@ inputsSignUp.forEach(input => {
     input.addEventListener('click', (event) => animateLabelInputs(event))
 })
 
+/**
+ * [ A função realiza as animações dos spans que são utilizados como label nos inputs ]
+ * @returns {void}
+ */
 function animateLabelInputs(event) {
     let span = event.target.parentNode.querySelector('.label_input');
 
@@ -99,6 +125,10 @@ eyesSignUp.forEach(eye => {
     eye.addEventListener('click', (event) => showPassword(event))
 })
 
+/**
+ * [ A função exibe ou esconde a senha do campo senha e confirmar senha, quando o usuário realiza o evento de click no icone ]
+ * @returns {void}
+ */
 function showPassword(event) {
     const passInput = event.target.parentNode.querySelector('input');
 

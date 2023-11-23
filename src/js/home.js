@@ -1,3 +1,7 @@
+/**
+ * Objeto de itens disponíveis na loja do site
+ * @type {Array<{name: String, prince: String}>}
+ */
 const storeItems = [
     {
         "name": "Cama para gato",
@@ -17,6 +21,11 @@ const storeItems = [
     }
 ]
 
+/**
+ * [ A Função cria a estrutura para exibição dos itens na loja ]
+ * @param {Array<{name: String, prince: String}>} storeItems 
+ * @returns {Array<String>}
+ */
 function CreateItemToStore(storeItems) {
 
     let items = [];
@@ -43,6 +52,10 @@ function CreateItemToStore(storeItems) {
     return items;
 }
 
+/**
+ * [ A Função Insere os elementos HTML na página ]
+ * @returns {void}
+ */
 function insertItemsIntoContainer() {
     const allitems = CreateItemToStore(storeItems).join('');
 
@@ -53,6 +66,12 @@ function insertItemsIntoContainer() {
 
 insertItemsIntoContainer()
 
+/**
+ * [ A Função exibe o nome do usuário no menu de maneira dinâmica para o usuário ]
+ * > O nome é resgatado do objeto criado no localStorage quando o usuário faz seu cadastro
+ * >> A Função exibe apenas o primeiro nome por questões estéticas
+ * @returns {void}
+ */
 function setUserName() {
     const user = JSON.parse(localStorage.getItem('new_user'))
 

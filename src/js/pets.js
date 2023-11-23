@@ -1,3 +1,9 @@
+/**
+ * [ A Função exibe o nome do usuário no menu de maneira dinâmica para o usuário ]
+ * > O nome é resgatado do objeto criado no localStorage quando o usuário faz seu cadastro
+ * >> A Função exibe apenas o primeiro nome por questões estéticas
+ * @returns {void}
+ */
 function setUserName() {
     const user = JSON.parse(localStorage.getItem('new_user'))
 
@@ -10,8 +16,17 @@ function setUserName() {
 
 setUserName()
 
+/**
+ * [ Objeto resgatado do localStorage quando o usuário adiciona um novo pet a lista de pets do sistema ]
+ * @type {Array<{breed: String, name: String, number: Number, species: String, temperament: String, type: String}>}
+ */
 const Pets = JSON.parse(localStorage.getItem('Pets')) || [];
 
+/**
+ * [ A função cria a estrutura HTML de cada Pet que estiver no array de Pets ]
+ * @param {Array<{breed: String, name: String, number: Number, species: String, temperament: String, type: String}>} Pets
+ * @returns {Array<String>}
+ */
 function CreatePet(Pets) {
 
     let pets = [];
@@ -47,6 +62,10 @@ function CreatePet(Pets) {
     return pets;
 }
 
+/**
+ * [ A Função Insere os elementos HTML na página ]
+ * @returns {void}
+ */
 function insertItemsIntoContainer() {
     const allPets = CreatePet(Pets).join('');
 
@@ -61,6 +80,10 @@ const addPetButton = document.getElementById('addPet');
 
 addPetButton.addEventListener('click', popUpToAddPet);
 
+/**
+ * [ A Função cria o popup de adição de pets, disponibilza para os usuários suas funcionalidades ]
+ * @returns {void}
+ */
 function popUpToAddPet() {
     const body = document.body;
 
@@ -127,6 +150,10 @@ function popUpToAddPet() {
     add.addEventListener('click', (event) => getDataPet(event))
 }
 
+/**
+ * [ A função realiza as animações dos spans que são utilizados como label nos inputs ]
+ * @returns {void}
+ */
 function animateLabelInputs(event) {
     const type = event.target.getAttribute('type');
 
@@ -137,6 +164,12 @@ function animateLabelInputs(event) {
     }
 }
 
+/**
+ * [ A função salva os dados enviados pelo usuário do formulário de cadastro de pet no LocalStorage ]
+ * > Cria um objeto no LocalStorage simulando um banco de dados com os dados do pet e recarrega a página para exibir o novo pet adicionado na tabela
+ * @param {MouseEvent} event 
+ * @returns {void}
+ */
 function getDataPet(event) {
     event.preventDefault();
 

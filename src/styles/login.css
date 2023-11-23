@@ -25,11 +25,15 @@ main {
     justify-content: flex-start;
     flex-direction: column;
     gap: 20px;
+
     background-color: white;
+
     padding: 20px;
     border-radius: 10px;
+
     width: 400px;
     height: 500px;
+    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
 }
 
@@ -94,6 +98,7 @@ form {
     justify-content: center;
     flex-direction: column;
     gap: 16px;
+
     width: 80%;
     margin-top: 40px;
 }
