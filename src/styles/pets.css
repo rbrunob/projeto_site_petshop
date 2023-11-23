@@ -1,0 +1,205 @@
+/* import de estilos padrões */
+@import url(/src/styles/default.css);
+
+.table_pets {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 4% 0;
+}
+
+.table_pets .header_table {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 40px;
+}
+
+.header_table span {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.header_table .add_pet {
+    background-color: transparent;
+
+    border: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.548);
+
+    transition: all .25s;
+}
+
+.header_table .add_pet:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.548);
+}
+
+.container_pets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+
+    overflow: hidden;
+
+    border-radius: 4px;
+}
+
+.container_pets .pet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 60px;
+
+    background-color: #02020227;
+}
+
+.container_pets .pet:nth-child(2n) {
+    background-color: #02020215;
+}
+
+.pet .pet_infos:first-child {
+    padding-left: 20px;
+}
+
+.pet .pet_infos {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: start;
+
+    width: 150px;
+    
+    overflow: hidden;
+}
+
+.pet_infos i {
+    font-size: 24px;
+}
+
+.pet .pet_service {
+    margin-right: 20px;
+
+    background-color: #F8B029;
+
+    padding: 4px 24px;
+
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    min-width: 110px;
+
+    cursor: pointer;
+
+    transition: all .25s;
+}
+
+.add_pet_popup {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00000029;
+    backdrop-filter: blur(2px);
+}
+
+.add_pet_popup .close {
+    position: absolute;
+    inset: 0;
+}
+
+.add_pet_popup form {
+    background: white;
+
+    box-shadow: 0 0 10px #0000004a;
+
+    border-radius: 8px;
+
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    z-index: 1;
+}
+
+.add_pet_popup form label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: auto;
+}
+
+.container_species {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    height: auto;
+}
+
+.container_actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 100%;
+}
+
+.container_actions button:first-child {
+    background-color: gray;
+}
+
+.label_radio {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.add_pet_popup form h2 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+
+    font-family: 'Roboto Condensed', sans-serif;
+}

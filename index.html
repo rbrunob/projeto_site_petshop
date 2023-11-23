@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="/src/styles/login.css" />
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <main>
+        <div class="container_login">
+            <img src="/src/images/Logo.svg" alt="Logo PetStore" />
+
+            <nav>
+                <button id="actionSignUp" class="action_form selected">
+                    Cadastro
+                </button>
+                <button id="actionSignIn" class="action_form">
+                    Login
+                </button>
+            </nav>
+
+            <form id="formSignUp">
+                <label>
+                    <span class="label_input">Nome</span>
+                    <input type="text" required id="name" />
+                </label>
+
+                <label>
+                    <span class="label_input">E-mail</span>
+                    <input type="email" required id="email" />
+                </label>
+
+                <label>
+                    <span class="label_input">Senha</span>
+                    <input type="password" required id="pass" />
+                    <!-- <i class="ph ph-eye"></i> -->
+                    <i class="ph ph-eye-slash"></i>
+                </label>
+
+                <label>
+                    <span class="label_input">Repetir senha</span>
+                    <input type="password" required id="passConfirm" />
+                    <!-- <i class="ph ph-eye"></i> -->
+                    <i class="ph ph-eye-slash"></i>
+                </label>
+
+                <label>
+                    <span class="label_input active">Data de nascimento</span>
+                    <input type="date" required id="birthDate" />
+                </label>
+
+                <button class="sign_up">
+                    cadastre-se
+                </button>
+            </form>
+
+            <form id="formSignIn" style="display: none;">
+                <label>
+                    <span class="label_input">E-mail</span>
+                    <input type="email" required id="emailSignIn" />
+                </label>
+
+                <label>
+                    <span class="label_input">Senha</span>
+                    <input type="password" required id="passSignIn" />
+                    <!-- <i class="ph ph-eye"></i> -->
+                    <i class="ph ph-eye-slash"></i>
+                </label>
+
+                <label>
+                    <input type="checkbox" required id="checkbox" />
+                    <span class="label_checkbox">continuar logado</span>
+                </label>
+
+                <button class="sign_up" >
+                    Login
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/src/js/credentials.js"></script>
+</body>
+
+</html>

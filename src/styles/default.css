@@ -1,0 +1,97 @@
+/* import de fonts do google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* import de estilos "reset.css" */
+@import url(/src/styles/reset.css);
+
+/* import dos estilos padrões para o menu do site */
+@import url(/src/styles/header.css);
+
+*,
+a {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: #242424;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    position: relative;
+
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+form label span {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-size: 16px;
+
+    pointer-events: none;
+
+    color: #b9b9b9;
+
+    transition: all .3s;
+}
+
+form label span.active {
+    left: 4px;
+    top: -6px;
+    font-size: 12px;
+}
+
+form label input {
+    width: 100%;
+
+    padding: 8px 32px 8px 12px;
+
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+form button {
+    background-color: #F8B029;
+
+    padding: 4px 24px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all .25s;
+}
+
+form button:hover {
+    background-color: #e99904;
+}
+
+form label:has(input[type="radio"]) {
+    width: auto;
+}
+
+input[type="radio"] {
+    width: auto;
+}
