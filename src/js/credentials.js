@@ -63,7 +63,7 @@ function verifyDataUser(event) {
     let password = inputs[1].value;
 
     if (email === user.email && password === user.pass) {
-        location.href = '/src/pages/home.html';
+        location.href = './src/pages/home.html';
     } else {
         setSignUpForm();
         return;
