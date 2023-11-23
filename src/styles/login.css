@@ -1,8 +1,8 @@
 /* import de estilos padrões */
-@import url(/src/styles/default.css);
+@import url(./default.css);
 
 body {
-    background-image: url(/src/images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 

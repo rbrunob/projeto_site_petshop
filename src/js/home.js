@@ -24,7 +24,7 @@ function CreateItemToStore(storeItems) {
     items.push(storeItems.map((item, index) => (`
         <div class="item">
             <figure>
-                <img src="/src/images/item-0${index + 1}.jpg" alt="Imagem do item número ${index + 1}" />
+                <img src="../images/item-0${index + 1}.jpg" alt="Imagem do item número ${index + 1}" />
             </figure>
 
             <div class="item_informations">

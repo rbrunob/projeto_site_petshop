@@ -1,5 +1,5 @@
 /* import de estilos padrões */
-@import url(/src/styles/default.css);
+@import url(./default.css);
 
 .table_pets {
     width: 90%;
